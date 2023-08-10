@@ -1,0 +1,21 @@
+  <h2 class="bg-primary text-center p-3">add new info</h2>
+
+  <div class="container">
+    <form [formGroup]="postform"   (ngSubmit)="post()" >
+        <div class="form-group">
+            <label for="first_name">Fisrt Name</label>
+            <input  required type="text" placeholder="first_name" formControlName="first_name" name="first_name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Fisrt Name</label>
+            <input required type="text" placeholder="last_name" formControlName="last_name" name="first_name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input required type="email" placeholder="email" formControlName="email" name="first_name" class="form-control">
+        </div>
+        <div class="form-group text-right">
+           <button class="btn btn-primary"  [disabled]="postform.invalid" >Sumbit</button>
+        </div>
+    </form>
+  </div>
